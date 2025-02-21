@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_estate_root" name="Estate">
+    <!-- Sub Menu (Parent of Properties) -->
+        <menuitem id="menu_estate_management" name="Management">
+    <!-- Action Menu (Linked to estate.property) -->
+            <menuitem id="menu_estate_property" name="Properties" action="action_estate_property"/>
+            <menuitem id="menu_estate_property_type" name="Properties Type" action="action_estate_property_type"/>
+            <menuitem id="menu_estate_property_offer" name="Properties Offer" action="action_estate_property_offer"/>
+            <menuitem id="menu_estate_property_tag" name="Properties Tag" action="action_estate_property_tag"/>
+        </menuitem>
+    </menuitem>
+</odoo>

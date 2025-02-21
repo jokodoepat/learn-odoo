@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+          <record id="estate_demo_1" model="estate.property">
+            <field name="name">Rumah Dukuh</field>
+            <field name="description">Rumah Nyaman yang terjangkau</field>
+            <field name="postcode">13550</field>
+            <field name="date_availability">2025-02-07</field>
+            <field name="expected_price">1000000000</field>
+            <field name="selling_price">1200000000</field>
+            <field name="bedrooms">3</field>
+            <field name="living_area">1</field>
+            <field name="facades">1</field>
+            <field name="garage">1</field>
+            <field name="garden">1</field>
+            <field name="garden_orientation">north</field>
+          </record>
+
+<!--
+          <record id="object1" model="estate.estate">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="estate.estate">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="estate.estate">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="estate.estate">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+    </data>
+</odoo>
