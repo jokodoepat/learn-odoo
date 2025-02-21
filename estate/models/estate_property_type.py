@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 class PropertyType(models.Model):
     _name = "estate.property.type"
     _description = "estate property type"
-    _order = "name"
+    _order = "name asc"
 
     name = fields.Char(string="Name")
     sequence = fields.Integer(default=1)

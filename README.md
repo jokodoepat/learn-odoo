@@ -10,7 +10,7 @@ This repository is dedicated to learning and exploring Odoo development.
 - **Odoo 17** Set up Odoo 17.
 
 ## Directory
-- **Estate**: This directory for development estate addons. 
+- **Estate**: This directory for development estate addons. *Chapter 15*
 
 ##
 **Let me know if you need additional sections!**

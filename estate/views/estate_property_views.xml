@@ -23,34 +23,6 @@
         </field>
     </record>
 
-<!--Property Type Form -->
-    <record id="estate_property_type_form_view" model="ir.ui.view">
-        <field name="name">estate.property.type.view.form</field>
-        <field name="model">estate.property.type</field>
-        <field name="arch" type="xml">
-            <form string="Property Type">
-                <sheet>
-                    <notebook>
-                        <page name="Properties">
-<!--                            <tree>-->
-<!--                                <field name="sequence" widget="handle"/>-->
-<!--                                <field name="property_ids"/>-->
-<!--                            </tree>-->
-<!--                            <field name="sequence" widget="handle"/>-->
-                            <field name="property_ids">
-                            <tree>
-                                <field name="name"/>
-                                <field name="expected_price"/>
-                                <field name="state"/>
-                            </tree>
-                            </field>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
-
 <!--Property Form -->
     <record id="estate_property_form_view" model="ir.ui.view">
         <field name="name">estate.property.view.form</field>
@@ -58,8 +30,8 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button string="Sold" type="object" name="action_sold" />
-                    <button string="Cancel" type="object" name="action_cancel" />
+                    <button string="Sold" type="object" name="action_sold" invisible="state in ('sold', 'canceled')"/>
+                    <button string="Cancel" type="object" name="action_cancel" invisible="state in ('sold', 'canceled')"/>
                     <field name="state" widget="statusbar" options="{'clickable': 'true'}"/>
                 </header>
                 <sheet>
@@ -74,7 +46,7 @@
                             <field name="date_availability"/>
                             <field name="state"/>
                             <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
-                            <field name="garden_orientation" widget="radio"/>
+                            <field name="garden_orientation" widget="radio" invisible="not garden"/>
                         </group>
                         <group>
                             <field name="expected_price"/>
@@ -90,7 +62,7 @@
                                 <field name="living_area"/>
                                 <field name="garage"/>
                                 <field name="garden"/>
-                                <field name="garden_area"/>
+                                <field name="garden_area" invisible="not garden"/>
                                 <field name="facades"/>
                                 <field name="total_area"/>
                                 <field name="description"/>
