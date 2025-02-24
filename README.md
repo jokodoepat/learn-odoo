@@ -12,6 +12,7 @@ This repository is dedicated to learning and exploring Odoo development.
 ## Directory
 - **Estate**: This directory for development estate addons. *Chapter 15*
 - **Contact Approval**: This directory for development contact approval addons.
+- **Rental**: This directory for development rental addons.
 
 ##
 **Let me know if you need additional sections!**
