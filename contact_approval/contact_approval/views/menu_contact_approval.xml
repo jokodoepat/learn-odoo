@@ -1,0 +1,10 @@
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_root" name="Contact Approval">
+    <!-- Sub Menu (Parent of Properties) -->
+        <menuitem id="menu_contact_approval_management" name="Management">
+    <!-- Action Menu (Linked to contact.approval) -->
+            <menuitem id="menu_contact_approval" name="Contact Approval From" action="action_contact_approval"/>
+        </menuitem>
+    </menuitem>
+</odoo>

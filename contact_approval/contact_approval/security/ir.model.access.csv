@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_contact_approval_admin,contact.approval.admin,model_res_partner,contact_approval_admin,1,1,1,1
+access_contact_approval_user,contact.approval.user,model_res_partner,contact_approval_user,1,0,0,0
+access_readonly_contact_approval,readonly contact approval,model_res_partner,base.group_user,1,0,0,0

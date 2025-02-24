@@ -1,0 +1,10 @@
+<odoo>
+        <!-- Contact Approval Admin Group -->
+        <record id="contact_approval_admin" model="res.groups">
+            <field name="name">Contact Approval Administrator</field>
+        </record>
+        <!-- Contact Approval User Group -->
+         <record id="contact_approval_user" model="res.groups">
+            <field name="name">Contact Approval User</field>
+        </record>
+</odoo>

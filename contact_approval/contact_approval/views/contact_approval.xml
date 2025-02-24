@@ -1,0 +1,28 @@
+<odoo>
+
+    <record id="contact_approval_form_view" model="ir.ui.view">
+            <field name="name">Contact Approval Form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+<!--        Perlu ditambahkan ketika inherit form        -->
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button string="Approve" name="action_approve" invisible="state in('approved', 'canceled')"  type="object" class="btn-primary" />
+                        <button string="Cancel" name="action_cancel" invisible="state in('approved', 'canceled')"  type="object" class="btn-secondary"/>
+                        <button string="Reset" name="action_reset" invisible="state in('draft')"  type="object" class="btn-secondary"/>
+                        <field name="state" widget="statusbar" options="{'clickable': False}" readonly="state in('approved', 'canceled')"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="approver_id" string="Approved By" readonly="1"/>
+            </xpath>
+            </field>
+    </record>
+
+    <record id="action_contact_approval" model="ir.actions.act_window">
+        <field name="name">Contact Approval</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
