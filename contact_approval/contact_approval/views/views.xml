@@ -1,5 +1,5 @@
-<odoo>
-  <data>
+<!--<odoo>-->
+<!--  <data>-->
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="contact_approval.list">
@@ -56,5 +56,5 @@
     <menuitem name="Server to list" id="contact_approval" parent="contact_approval.menu_2"
               action="contact_approval.action_server"/>
 -->
-  </data>
-</odoo>
+<!--  </data>-->
+<!--</odoo>-->
