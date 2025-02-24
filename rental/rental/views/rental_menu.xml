@@ -1,0 +1,12 @@
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_root" name="Rental" sequence="1"/>
+    <!-- Sub Menu (Parent of Properties) -->
+<!--        <menuitem id="menu_rental_management" name="Product">-->
+    <!-- Action Menu (Linked to contact.approval) -->
+<!--            <menuitem id="menu_rental" name="Rental From" action="action_rental_product"/>-->
+<!--        </menuitem>-->
+<!--    </menuitem>-->
+        <menuitem id="menu_rental_product" name="Product" action="action_rental_product" parent="menu_root" sequence="2"/>
+        <menuitem id="menu_rental_order" name="Order" action="action_rental_sale" parent="menu_root" sequence="3"/>
+</odoo>

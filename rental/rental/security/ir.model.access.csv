@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_rental_rental,rental.rental,model_rental_rental,base.group_user,1,1,1,1
+access_rental_admin,rental.admin,model_product_template,rental_admin,1,1,1,1
+access_rental_user,rental.user,model_product_template,rental_user,1,0,0,0
+access_readonly_rental,rental user,model_product_template,base.group_user,1,0,0,0
+access_rental_sale_admin,rental.sale.admin,model_sale_order,rental_admin,1,1,1,1
+access_rental_sale_user,rental.sale.user,model_sale_order,rental_user,1,0,0,0
+access_readonly_rental_sale,readonly rental sale,model_sale_order,base.group_user,1,0,0,0

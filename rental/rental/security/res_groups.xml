@@ -1,0 +1,10 @@
+<odoo>
+        <!-- Rental Admin Group -->
+        <record id="rental_admin" model="res.groups">
+            <field name="name">Rental Administrator</field>
+        </record>
+        <!-- Rental User Group -->
+         <record id="rental_user" model="res.groups">
+            <field name="name">Rental User</field>
+        </record>
+</odoo>
