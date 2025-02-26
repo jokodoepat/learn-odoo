@@ -1,11 +1,37 @@
 <odoo>
+
+<record id="view_sale_order_reserved_tree" model="ir.ui.view">
+        <field name="name">Sale Order Reserved </field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <tree string="Reserved Sale Orders">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="rental_start_date"/>
+                <field name="rental_return_date"/>
+                <field name="duration_days"/>
+                <field name="amount_total"/>
+                <field name="state"/>
+                <field
+                    name="rental_status"
+                    decoration-success="rental_status == 'reserved'"
+                    decoration-primary="rental_status == 'returned'"
+                    decoration-danger="rental_status == 'cancelled'"
+                    decoration-muted="rental_status == 'draft'"
+                    widget="badge"
+                    optional="show"
+                />
+            </tree>
+        </field>
+    </record>
+
      <record id="view_rental_product" model="ir.ui.view">
         <field name="name">product.rental</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <button name="%(product.product_variant_action)d" type="action"
+                <button name="action_view_reserved_orders" type="object"
                     icon="fa-sitemap" class="oe_stat_button">
                     <div class="o_field_widget o_stat_info">
                         <span class="o_stat_value d-flex gap-1">
