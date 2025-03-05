@@ -6,17 +6,20 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
 <!--        Perlu ditambahkan ketika inherit form        -->
-                <xpath expr="//sheet" position="before">
+                <xpath expr="//form/sheet" position="before">
                     <header>
+                        <group groups="contact_approval.contact_approval_admin">
                         <button string="Approve" name="action_approve" invisible="state in('approved', 'canceled')"  type="object" class="btn-primary" />
                         <button string="Cancel" name="action_cancel" invisible="state in('approved', 'canceled')"  type="object" class="btn-secondary"/>
                         <button string="Reset" name="action_reset" invisible="state in('draft')"  type="object" class="btn-secondary"/>
+                        </group>
                         <field name="state" widget="statusbar" options="{'clickable': False}" readonly="state in('approved', 'canceled')"/>
                     </header>
                 </xpath>
                 <xpath expr="//field[@name='vat']" position="after">
-                    <field name="approver_id" string="Approved By" readonly="1"/>
-            </xpath>
+                    <field name="approver_id" readonly="True" invisible="state == 'canceled'" />
+                    <field name="approver_id" readonly="True" invisible="state == 'approved' or state == 'draft'" string="Canceled By" />
+                </xpath>
             </field>
     </record>
 

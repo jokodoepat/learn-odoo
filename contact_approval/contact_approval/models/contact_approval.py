@@ -19,7 +19,7 @@ class ContactApproval(models.Model):
 
     # ================ Relational Data ================
 
-    approver_id = fields.Many2one('res.users', string='Approved By')
+    approver_id = fields.Many2one('res.users', string='Approved By', readonly=True)
 
     # ================ Function ================
 
@@ -30,8 +30,10 @@ class ContactApproval(models.Model):
 
     def action_cancel(self):
         for rec in self:
+            rec.approver_id = self.env.user
             rec.state = 'canceled'
 
     def action_reset(self):
         for rec in self:
+            rec.approver_id = False
             rec.state = 'draft'
